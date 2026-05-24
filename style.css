@@ -189,9 +189,17 @@ body {
 
 h1 {
   margin: 0;
-  font-size: clamp(44px, 8vw, 76px);
-  line-height: 1;
+  font-size: 56px;
+  line-height: 1.08;
   letter-spacing: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: #315f56;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.6;
 }
 
 .lead {
@@ -200,30 +208,61 @@ h1 {
   font-size: 18px;
 }
 
-.speech {
-  min-height: 128px;
+.card-result {
+  min-height: 220px;
+  display: grid;
+  align-content: center;
+  gap: 10px;
   padding: 18px;
   border: 1px solid #d9c7ac;
   border-radius: 16px;
   background: #fff8ea;
-  font-size: 21px;
   line-height: 1.7;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
-.choice {
+.card-kind {
   display: block;
-  margin-bottom: 6px;
-  color: #315f56;
-  font-size: 24px;
+  color: #6f3d2f;
+  font-size: 15px;
   font-weight: 800;
 }
 
-.echo {
+.card-number {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #315f56;
+  color: #fffdf8;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.card-title {
   display: block;
-  margin-top: 10px;
+  color: #315f56;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.card-hint {
+  display: block;
+  color: #3f352d;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+
+.notice {
+  margin: 0;
   color: #6a5a49;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 1.7;
 }
 
 label {
@@ -242,6 +281,10 @@ input {
   background: #fffdf8;
 }
 
+input::placeholder {
+  color: #9d948a;
+}
+
 input:focus {
   outline: 3px solid rgba(201, 111, 56, 0.28);
   border-color: #c96f38;
@@ -249,7 +292,7 @@ input:focus {
 
 .buttons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
@@ -265,18 +308,13 @@ button {
   box-shadow: 0 8px 18px rgba(48, 35, 22, 0.16);
 }
 
-#welcomeButton {
+#talkButton {
   background: #315f56;
   color: #fffdf8;
 }
 
-#tableButton {
+#actionButton {
   background: #c96f38;
-  color: #fffdf8;
-}
-
-#leaveButton {
-  background: #6f3d2f;
   color: #fffdf8;
 }
 
@@ -365,9 +403,24 @@ button:focus-visible {
     font-size: 16px;
   }
 
-  .speech {
-    min-height: 144px;
-    font-size: 19px;
+  h1 {
+    font-size: 42px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+  }
+
+  .card-result {
+    min-height: 224px;
+  }
+
+  .card-title {
+    font-size: 23px;
+  }
+
+  .card-hint {
+    font-size: 16px;
   }
 
   .buttons {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>小虎</title>
+  <title>小虎の手ほどき</title>
 
   <!-- 見た目の設定は style.css に分けています。 -->
   <link rel="stylesheet" href="style.css">
@@ -35,30 +35,43 @@
         </div>
       </div>
 
-      <!-- 右側：入力欄、返答エリア、ボタン。 -->
+      <!-- 右側：タイトル、札の表示エリア、ボタン。 -->
       <div class="panel">
         <div>
-          <p class="eyebrow">白虎型対話アプリ</p>
-          <h1>小虎</h1>
+          <p class="eyebrow">白虎型ランダム札アプリ</p>
+          <h1>小虎の手ほどき</h1>
         </div>
 
-        <p class="lead">
-          今の思いつきや気分を、機内持ち込み・預け入れ・今日は持たない荷物に軽く仕分ける小さな補助パネルです。
+        <p class="subtitle">
+          話すか、動くか。いま必要な直感を、小さく起動するための札。
         </p>
 
+        <p class="lead">
+          正しい答えではなく、出た札への「反応」を見ます。
+        </p>
+
+        <label for="todayQuestion">今日の問い</label>
+        <input id="todayQuestion" type="text" placeholder="例：今なにを扱う？ / 今日は何を置いていく？">
+
         <!-- JavaScriptで、この中の文字を書き換えます。 -->
-        <div class="speech" id="speech" aria-live="polite">
-          浮かんだ荷物を、軽く仕分けよか。
+        <div class="card-result" id="cardResult" aria-live="polite">
+          <span class="card-kind">小虎の札</span>
+          <span class="card-number">--</span>
+          <span class="card-title">話すか、動くか選んでな。</span>
+          <span class="card-hint">問いを書いてから引くと、自分の反応が見えやすいで。</span>
         </div>
 
-        <label for="message">今の一言</label>
-        <input id="message" type="text" placeholder="例：ちょっと疲れた / メモしたいことがある">
+        <label for="bodyReaction">心身の反応</label>
+        <input id="bodyReaction" type="text" placeholder="例：それは嫌 / あ、これや / 今日は置いていく">
 
         <div class="buttons">
-          <button id="welcomeButton" type="button">機内持ち込み</button>
-          <button id="tableButton" type="button">預け入れ荷物</button>
-          <button id="leaveButton" type="button">今日は置いていく</button>
+          <button id="talkButton" type="button">話す</button>
+          <button id="actionButton" type="button">行動する</button>
         </div>
+
+        <p class="notice">
+          このアプリは、気持ちや考えを仕分けるための小さな実験アプリです。医療・心理支援の代替ではありません。個人情報や秘密情報は入力しないでください。
+        </p>
       </div>
     </section>
   </main>
