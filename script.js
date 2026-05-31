@@ -337,6 +337,11 @@ const actionCards = [
     number: "33",
     title: "小虎と積みあげてきたものをコンテキストにする",
     hint: "散らばった会話を、未来の滑走路に変えよ。"
+  },
+  {
+    number: "34",
+    title: "世界と話すためだけに外出する",
+    hint: "龍を持って世界と絡む。成果はいらない。返事がなくてもいい。バカバカしい余白を作る。To have a little chat with the world."
   }
 ];
 
